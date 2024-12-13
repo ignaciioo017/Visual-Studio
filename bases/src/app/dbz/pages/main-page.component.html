@@ -1,0 +1,15 @@
+<h1>Personajes DBZ</h1>
+<hr>
+<!--Estructura de la interfaz principal llamando a las interfaces de la lista y de agregar personaje-->
+<div class="row">
+  <div class="col">
+
+    <dbz-list [characterList]="characters"
+    (onDelete)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+
+  <div class="col">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>

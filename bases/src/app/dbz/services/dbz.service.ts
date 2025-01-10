@@ -23,6 +23,7 @@ export class DbzService {
           this.characters.splice(index,1);
         }
 
+        
 
         
 }

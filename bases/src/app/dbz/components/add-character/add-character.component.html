@@ -1,0 +1,20 @@
+<h4>Agregar nuevo personaje</h4>
+<!--formulario para los personajes con el método para enviarlo-->
+    <form class="row" (ngSubmit)="emitCharacter()">
+      <!--Relaciona la variable del charcater.name con la variable del formulario name-->
+      <input type="text"
+      [(ngModel)]="character.name"
+      name="name"
+      class="form-control mb-2"
+      placeholder="Nombre">
+      <!--Relaciona la variable del charcater.power con la variable del formulario power-->
+      <input type="number"
+      [(ngModel)]="character.power"
+      name="power"
+      class="form-control mb-2"
+      placeholder="placeholder">
+      <!--Botón con un método para enviarlo-->
+      <button type="submit" class="btn btn-primary" (click)="emitCharacter()">
+      Agregar
+    </button>
+    </form>

@@ -1,0 +1,988 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>tienda-pesca documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">tienda-pesca documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  InicioComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/inicio/inicio.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente principal donde se muestran las mareas.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-inicio</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./inicio.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./inicio.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fecha" >fecha</a>
+                            </li>
+                            <li>
+                                <a href="#idPuerto" >idPuerto</a>
+                            </li>
+                            <li>
+                                <a href="#mareas" >mareas</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(mareasService: <a href="../injectables/MareasService.html" target="_self">MareasService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/pages/inicio/inicio.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor del componente.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>mareasService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MareasService.html" target="_self" >MareasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Servicio para obtener las mareas.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="42"
+                                    class="link-to-prism">src/app/pages/inicio/inicio.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método que se ejecuta al iniciar el componente.
+Aquí se obtiene la fecha actual y se realiza la llamada al servicio para obtener las mareas.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fecha"></a>
+                    <span class="name">
+                        <span ><b>fecha</b></span>
+                        <a href="#fecha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/pages/inicio/inicio.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fecha en formato &#39;YYYYMMDD&#39; para obtener las mareas.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="idPuerto"></a>
+                    <span class="name">
+                        <span ><b>idPuerto</b></span>
+                        <a href="#idPuerto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>40</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/pages/inicio/inicio.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>ID del puerto para el cual se obtienen las mareas (Puerto de Cádiz).</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mareas"></a>
+                    <span class="name">
+                        <span ><b>mareas</b></span>
+                        <a href="#mareas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/inicio/inicio.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Array que almacena la información de las mareas.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { MareasService } from &#x27;../../service/Api/mareas.servicio&#x27;;
+
+/**
+ * Componente principal donde se muestran las mareas.
+ * @component
+ */
+@Component({
+  selector: &#x27;app-inicio&#x27;,
+  templateUrl: &#x27;./inicio.component.html&#x27;,
+  styleUrls: [&#x27;./inicio.component.css&#x27;]
+})
+export class InicioComponent implements OnInit {
+  /**
+   * Array que almacena la información de las mareas.
+   * @type {any[]}
+   */
+  mareas: any[] &#x3D; [];
+
+  /**
+   * ID del puerto para el cual se obtienen las mareas (Puerto de Cádiz).
+   * @type {number}
+   */
+  idPuerto: number &#x3D; 40;
+
+  /**
+   * Fecha en formato &#x27;YYYYMMDD&#x27; para obtener las mareas.
+   * @type {string}
+   */
+  fecha: string &#x3D; &#x27;&#x27;;
+
+  /**
+   * Constructor del componente.
+   * @param {MareasService} mareasService - Servicio para obtener las mareas.
+   */
+  constructor(private mareasService: MareasService) {}
+
+  /**
+   * Método que se ejecuta al iniciar el componente.
+   * Aquí se obtiene la fecha actual y se realiza la llamada al servicio para obtener las mareas.
+   */
+  ngOnInit(): void {
+    // Obtener la fecha de hoy en formato &#x27;YYYYMMDD&#x27;
+    const fechaHoy &#x3D; new Date();
+    this.fecha &#x3D; fechaHoy.toISOString().split(&#x27;T&#x27;)[0].replace(/-/g, &#x27;&#x27;); // Fecha actual en formato &#x27;YYYYMMDD&#x27;
+
+    // Llamada al servicio pasando la fecha actual y el puerto
+    this.mareasService.obtenerMareas(this.idPuerto, this.fecha).subscribe(
+      (data) &#x3D;&gt; {
+        if (data?.mareas?.datos?.marea) {
+          this.mareas &#x3D; data.mareas.datos.marea; // Extrae el array correcto
+        } else {
+          console.error(&#x27;Formato de datos incorrecto:&#x27;, data);
+          this.mareas &#x3D; []; // Evita errores si la API devuelve algo inesperado
+        }
+        console.log(this.mareas); // Ver los datos en la consola
+      },
+      (error) &#x3D;&gt; {
+        console.error(&#x27;Error al obtener las mareas&#x27;, error);
+      }
+    );
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;br&gt;
+&lt;br&gt; 
+
+&lt;!--Este contenedor es el principal de la página web donde está la imagen a la izquierda y 
+el texto a la derecha--&gt;
+&lt;div class&#x3D;&quot;inicio-container&quot;&gt;  
+  &lt;br&gt;
+    &lt;br&gt;
+    &lt;div class&#x3D;&quot;contenido-principal&quot;&gt;
+      &lt;div class&#x3D;&quot;imagen1&quot;&gt;
+        &lt;img src&#x3D;&quot;Image/imgInicio.jpg&quot; alt&#x3D;&quot;Imagen de la tienda de pesca&quot; /&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;contenido-introduccion&quot;&gt;
+        &lt;h2&gt;Bienvenidos a nuestra tienda de pesca&lt;/h2&gt;
+        &lt;p&gt;
+          En nuestra tienda encontrarás todo lo necesario para disfrutar de la pesca, desde cañas, 
+          carretes y más. Estamos comprometidos a ofrecer productos de calidad para los amantes 
+          de este deporte. ¡Prepárate para tu próxima aventura acuática con nosotros!
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+
+    &lt;!--Este es el contenedor que se encuentra debajo del principal donde está el texto a la 
+    izquierda y la imagen a la derecha--&gt;
+    &lt;div class&#x3D;&quot;contenido-inferior&quot;&gt;
+      &lt;div class&#x3D;&quot;productos-info&quot;&gt;
+        &lt;h3&gt;PRODUCTOS DESTACADOS&lt;/h3&gt;
+        &lt;p&gt;
+          Ofrecemos una amplia variedad de productos para todos los niveles, desde principiantes hasta 
+          expertos. Cada uno de nuestros productos ha sido seleccionado cuidadosamente para asegurar que 
+          tengas la mejor experiencia de pesca posible.
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;br&gt;
+      &lt;div class&#x3D;&quot;productos-imagen&quot;&gt;
+        &lt;img src&#x3D;&quot;Image/imgInicio2.avif&quot; alt&#x3D;&quot;Productos de pesca&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; 
+
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    
+  
+ &lt;!--Este contenedor es el contenedor que muestra los productos más vendidos llamando a su imagen
+  y si pulsas cualquiera de ellas te lleva hacia el catálogo y además el producto se hace grande si
+  el cursor se encuentra encima de la imagen--&gt;
+  &lt;div class&#x3D;&quot;PrVend&quot;&gt;
+    &lt;h2 id&#x3D;&quot;tP&quot;&gt;PRODUCTOS MAS VENDIDOS&lt;/h2&gt;
+    
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;div class&#x3D;&quot;productos-container&quot; onclick&#x3D;&quot;window.location.href&#x3D;&#x27;/catalogo&#x27;;&quot; style&#x3D;&quot;cursor: pointer;&quot;&gt;
+      &lt;div class&#x3D;&quot;producto-item&quot;&gt;
+        &lt;img src&#x3D;&quot;Image/p1.jpg&quot; alt&#x3D;&quot;Producto 1&quot; class&#x3D;&quot;imagen-producto&quot;/&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;producto-item&quot;&gt;
+        &lt;img src&#x3D;&quot;Image/p2.png&quot; alt&#x3D;&quot;Producto 2&quot; class&#x3D;&quot;imagen-producto&quot;/&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;producto-item&quot;&gt;
+        &lt;img src&#x3D;&quot;Image/p3.png&quot; alt&#x3D;&quot;Producto 3&quot; class&#x3D;&quot;imagen-producto&quot;/&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;producto-item&quot;&gt;
+        &lt;img src&#x3D;&quot;Image/p4.png&quot; alt&#x3D;&quot;Producto 4&quot; class&#x3D;&quot;imagen-producto&quot;/&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;producto-item&quot;&gt;
+        &lt;img src&#x3D;&quot;Image/p5.png&quot; alt&#x3D;&quot;Producto 5&quot; class&#x3D;&quot;imagen-producto&quot;/&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;br&gt;
+    &lt;br&gt;
+
+
+    &lt;!--Este es el contenedor de la api el cual se encarga de mostrar en forma de lista 
+    los estados de las mareas según la fecha--&gt;
+    &lt;div class&#x3D;&quot;mareas-container&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;mareas.length &gt; 0; else noData&quot;&gt;
+      &lt;h2&gt;Mareas para el Puerto {{ idPuerto }} (Cádiz) &lt;/h2&gt;
+      &lt;br&gt;
+      &lt;ul class&#x3D;&quot;listado&quot;&gt;
+        &lt;br&gt;
+        &lt;p *ngFor&#x3D;&quot;let marea of mareas&quot;&gt;
+          Hora: {{ marea.hora }} - Altura: {{ marea.altura }}
+        &lt;/p&gt;
+        &lt;br&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;ng-template #noData&gt;
+      &lt;p&gt;No hay datos de mareas disponibles.&lt;/p&gt;
+    &lt;/ng-template&gt;
+    &lt;/div&gt;
+ 
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+
+  &lt;/div&gt;
+  
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./inicio.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/* Estilo general para el contenedor principal */
+.inicio-container {
+  padding: 25px;  /* Espaciado interno alrededor del contenido */
+  color: #284869;  /* Color principal para el texto */
+  margin-left: 20px;  /* Espaciado en el lado izquierdo */
+  margin-right: 20px;  /* Espaciado en el lado derecho */
+  background: linear-gradient(to bottom, #E3F2F2, #F2F2F2);
+  border-radius: 10px;  /* Bordes redondeados para dar suavidad */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave alrededor del contenedor */
+}
+
+.inicio-container:hover {
+  background-color: #cccaca;  /* Fondo ligeramente gris al pasar el cursor */
+}
+
+/* Contenedor de la sección principal con la imagen y texto */
+.contenido-principal {
+  display: flex;  /* Usa el modelo Flexbox para alinear elementos */
+  justify-content: space-between;  /* Alinea los elementos de forma equidistante */
+  align-items: center;  /* Alinea los elementos verticalmente al centro */
+  margin-bottom: 30px;  /* Espaciado inferior entre las secciones */
+  color: #284869;  /* Color del texto de la sección */
+  background-color: #f9f9f9;  /* Fondo gris claro para un contraste suave */
+  padding: 25px;  /* Espaciado interno de la sección */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Sombra ligera para darle profundidad */
+  transition: transform 0.3s ease-in-out;  /* Transición suave para el efecto de elevación */
+}
+
+.contenido-principal:hover {
+  transform: translateY(-5px);  /* Efecto de elevación al pasar el cursor, crea dinamismo */
+}
+
+/* Estilo para las imágenes */
+.imagen1 img {
+  width: 100%;  /* La imagen ocupa todo el ancho del contenedor */
+  max-width: 500px;  /* La imagen no se estirará más de 500px de ancho */
+  height: auto;  /* La altura se ajusta automáticamente para mantener la proporción */
+  border-radius: 10px;  /* Bordes redondeados en la imagen */
+  height: 250px;  /* Establece una altura fija para la imagen */
+  transition: transform 0.3s ease-in-out;  /* Efecto de transición para el zoom */
+}
+
+.imagen1 img:hover {
+  transform: scale(1.05);  /* Al pasar el cursor, la imagen aumenta ligeramente de tamaño */
+}
+
+/* Estilo para la introducción del texto */
+.contenido-introduccion {
+  max-width: 700px;  /* Establece un ancho máximo para la caja de texto */
+  color: #284869;  /* Color del texto de la introducción */
+  
+}
+
+.contenido-introduccion h2 {
+  margin-left: 5%;
+  font-size: 2.5em;  /* Tamaño grande para el título */
+  margin-bottom: 20px;  /* Espaciado inferior entre el título y el texto */
+  text-transform: uppercase;  /* Convierte el texto del título a mayúsculas */
+  letter-spacing: 2px;  /* Espaciado entre letras */
+  animation: fadeIn 1s ease-out;  /* Animación de entrada del título */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;  /* La animación comienza con el título invisible */
+  }
+  to {
+    opacity: 1;  /* La animación termina con el título completamente visible */
+  }
+}
+
+.contenido-introduccion p {
+  margin-left: 5%;
+  font-size: 1.2em;  /* Tamaño del texto del párrafo */
+  line-height: 1.7;  /* Altura de la línea para hacer el texto más legible */
+  color: #34495e;  /* Gris oscuro para el texto de los párrafos */
+  font-weight: 300;  /* Peso de fuente ligero para los párrafos */
+}
+
+/* Contenido inferior */
+.contenido-inferior {
+  display: flex;  /* Usamos Flexbox para disposición de los elementos */
+  justify-content: space-between;  /* Los elementos están espaciados de manera equidistante */
+  align-items: center;  /* Los elementos se alinean verticalmente en el centro */
+  color: #498183;  /* Color para el texto en esta sección */
+  margin-top: 40px;  /* Espaciado superior */
+  background-color: #f9f9f9;  /* Fondo gris suave para dar contraste */
+  padding: 30px;  /* Espaciado interno para separar el contenido */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Sombra suave */
+  transition: transform 0.3s ease-in-out;  /* Transición suave para el efecto de elevación */
+}
+
+.contenido-inferior:hover {
+  transform: translateY(-5px);  /* Efecto de elevación al pasar el cursor, crea dinamismo */
+}
+
+.productos-info {
+  max-width: 700px;  /* Ancho máximo para la caja de información de productos */
+}
+
+.productos-info h3 {
+  font-size: 2.5em;  /* Tamaño grande para el subtítulo */
+  margin-bottom: 15px;  /* Espaciado inferior entre el subtítulo y el texto */
+  color: #284869;  /* Color del texto */
+}
+
+.productos-info p {
+  font-size: 1.2em;  /* Tamaño del texto */
+  line-height: 1.8;  /* Altura de la línea para mejorar la legibilidad */
+  color: #34495e;  /* Gris oscuro para el texto de los párrafos */
+}
+
+/* Imagen de los productos */
+.productos-imagen img {
+  width: 100%;  /* La imagen ocupa todo el ancho del contenedor */
+  max-width: 500px;  /* No se estirará más allá de 500px de ancho */
+  height: 250px;  /* Altura fija para la imagen */
+  border-radius: 10px;  /* Bordes redondeados */
+  margin-right: 80px;  /* Espaciado derecho entre la imagen y el texto */
+  transition: transform 0.3s ease-in-out;  /* Efecto de transición para el zoom */
+}
+
+.productos-imagen img:hover {
+  transform: scale(1.05);  /* Efecto de zoom al pasar el cursor */
+}
+
+/* Título &quot;PRODUCTOS MÁS VENDIDOS&quot; */
+#tP {
+  color: #284869;  /* Color para el título */
+  text-align: center;  /* Alineación centrada */
+  margin-top: 60px;  /* Espaciado superior */
+  font-size: 3em;  /* Tamaño de fuente grande */
+  font-weight: 700;  /* Peso de fuente grueso para resaltar */
+  letter-spacing: 3px;  /* Espaciado entre letras */
+  text-transform: uppercase;  /* Texto en mayúsculas */
+  color: #34495e;  /* Gris oscuro para el color del título */
+}
+
+.PrVend {
+  padding: 25px;  /* Espaciado interno alrededor del contenido */
+  color: #284869;  /* Color principal para el texto */
+  margin-left: 20px;  /* Espaciado en el lado izquierdo */
+  margin-right: 20px;  /* Espaciado en el lado derecho */
+  background-color: #ffffff;  /* Fondo blanco para una apariencia limpia */
+  border-radius: 10px;  /* Bordes redondeados para dar suavidad */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave alrededor del contenedor */
+  transition: background-color 0.3s ease; 
+}
+
+.productos-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px; /* Espacio entre el título y los productos */
+  gap: 20px; /* Espacio entre los contenedores de los productos */
+}
+
+.producto-item {
+  background-color: #E3F2F2; /* Fondo claro para resaltar el producto */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 0px; /* Espacio alrededor de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+  text-align: center; /* Centra la imagen dentro del contenedor */ 
+  transition: transform 0.3s ease; /* Efecto de transición para el hover */
+
+}
+
+.imagen-producto {
+  width: 100%;
+  max-width: 200px; /* Tamaño máximo de la imagen */
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+.imagen-producto:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+
+/* Estilos para la sección de Mareas */
+.mareas-container {
+  margin: 40px auto;
+  padding: 25px;
+  max-width: 800px;
+  background: #ffffff; /* Color de fondo suave */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mareas-container h2 {
+  font-size: 2em;
+  color: #284869;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.mareas-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.listado {
+  background-color: #E3F2F2; /* Color de fondo */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.mareas-list li:hover {
+  background: #d6e9e9;
+  transition: background 0.3s ease-in-out;
+}
+
+.no-data {
+  font-size: 1.2em;
+  color: #b22222;
+  font-weight: bold;
+  text-align: center;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><br><br> <!--Este contenedor es el principal de la página web donde está la imagen a la izquierda y el texto a la derecha--><div class="inicio-container">    <br>    <br>    <div class="contenido-principal">      <div class="imagen1">        <img src="Image/imgInicio.jpg" alt="Imagen de la tienda de pesca" />      </div>      <div class="contenido-introduccion">        <h2>Bienvenidos a nuestra tienda de pesca</h2>        <p>          En nuestra tienda encontrarás todo lo necesario para disfrutar de la pesca, desde cañas,           carretes y más. Estamos comprometidos a ofrecer productos de calidad para los amantes           de este deporte. ¡Prepárate para tu próxima aventura acuática con nosotros!        </p>      </div>    </div>        <!--Este es el contenedor que se encuentra debajo del principal donde está el texto a la     izquierda y la imagen a la derecha-->    <div class="contenido-inferior">      <div class="productos-info">        <h3>PRODUCTOS DESTACADOS</h3>        <p>          Ofrecemos una amplia variedad de productos para todos los niveles, desde principiantes hasta           expertos. Cada uno de nuestros productos ha sido seleccionado cuidadosamente para asegurar que           tengas la mejor experiencia de pesca posible.        </p>      </div>      <br>      <div class="productos-imagen">        <img src="Image/imgInicio2.avif" alt="Productos de pesca" />      </div>    </div>     <br>    <br>    <br>    <br>    <br>    <br>       <!--Este contenedor es el contenedor que muestra los productos más vendidos llamando a su imagen  y si pulsas cualquiera de ellas te lleva hacia el catálogo y además el producto se hace grande si  el cursor se encuentra encima de la imagen-->  <div class="PrVend">    <h2 id="tP">PRODUCTOS MAS VENDIDOS</h2>        <br>    <br>    <div class="productos-container" onclick="window.location.href=\'/catalogo\';" style="cursor: pointer;">      <div class="producto-item">        <img src="Image/p1.jpg" alt="Producto 1" class="imagen-producto"/>      </div>      <div class="producto-item">        <img src="Image/p2.png" alt="Producto 2" class="imagen-producto"/>      </div>      <div class="producto-item">        <img src="Image/p3.png" alt="Producto 3" class="imagen-producto"/>      </div>      <div class="producto-item">        <img src="Image/p4.png" alt="Producto 4" class="imagen-producto"/>      </div>      <div class="producto-item">        <img src="Image/p5.png" alt="Producto 5" class="imagen-producto"/>      </div>    </div>    </div>    <br>    <br>    <!--Este es el contenedor de la api el cual se encarga de mostrar en forma de lista     los estados de las mareas según la fecha-->    <div class="mareas-container">    <div *ngIf="mareas.length > 0; else noData">      <h2>Mareas para el Puerto {{ idPuerto }} (Cádiz) </h2>      <br>      <ul class="listado">        <br>        <p *ngFor="let marea of mareas">          Hora: {{ marea.hora }} - Altura: {{ marea.altura }}        </p>        <br>      </ul>    </div>        <ng-template #noData>      <p>No hay datos de mareas disponibles.</p>    </ng-template>    </div>     <br>    <br>    <br>  </div>  </div>'
+    var COMPONENTS = [{'name': 'AddCharacterComponent', 'selector': 'dbz-add-character'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CatalogoComponent', 'selector': 'app-catalogo'},{'name': 'CestaComponent', 'selector': 'app-cesta'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormularioCestaComponent', 'selector': 'app-formulario-cesta'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'InterfaceComponent', 'selector': 'app-interface'},{'name': 'ListComponent', 'selector': 'dbz-list'},{'name': 'MainPageComponent', 'selector': 'app-dbz-main-page'},{'name': 'ProductoComponent', 'selector': 'app-producto'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InicioComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InicioComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

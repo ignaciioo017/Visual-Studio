@@ -1,4 +1,7 @@
 {
     "title": "Documentación del Proyecto",
-    "output": "./documentation"
+    "output": "./documentation",
+    "port": 8081,
+    "serve": true
   }
+  

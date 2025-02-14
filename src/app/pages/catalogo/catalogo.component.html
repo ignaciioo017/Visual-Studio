@@ -1,1 +1,22 @@
-<p>catalogo works!</p>
+<!--
+  Título principal de la sección de productos
+-->
+<h1>NUESTROS PRODUCTOS</h1>
+
+<br>
+
+<!--Contenedor principal para los productos con estilo de cuadrícula-->
+<div class="grid">
+    <!--Recorremos la lista de productos para mostrar cada uno en un contenedor
+    Usamos la directiva *ngFor para iterar sobre la lista 'productos' y mostrar cada producto.-->
+    <div *ngFor="let producto of productos" class="card">
+        
+        <img [src]="producto.imagen" [alt]="producto.nombre">
+        <h2>{{ producto.nombre }}</h2>
+        <p>{{ producto.descripcion }}</p>
+        <p><strong>Precio:</strong> {{ producto.precio | currency }}</p>
+
+        <!--Botón para ver más detalles del producto-->
+        <button (click)="verDetalles(producto)">Ver detalles</button>
+    </div>
+</div>

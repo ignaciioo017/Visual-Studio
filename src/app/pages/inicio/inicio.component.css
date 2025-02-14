@@ -1,0 +1,219 @@
+/* Estilo general para el contenedor principal */
+.inicio-container {
+  padding: 25px;  /* Espaciado interno alrededor del contenido */
+  color: #284869;  /* Color principal para el texto */
+  margin-left: 20px;  /* Espaciado en el lado izquierdo */
+  margin-right: 20px;  /* Espaciado en el lado derecho */
+  background: linear-gradient(to bottom, #E3F2F2, #F2F2F2);
+  border-radius: 10px;  /* Bordes redondeados para dar suavidad */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave alrededor del contenedor */
+}
+
+.inicio-container:hover {
+  background-color: #cccaca;  /* Fondo ligeramente gris al pasar el cursor */
+}
+
+/* Contenedor de la sección principal con la imagen y texto */
+.contenido-principal {
+  display: flex;  /* Usa el modelo Flexbox para alinear elementos */
+  justify-content: space-between;  /* Alinea los elementos de forma equidistante */
+  align-items: center;  /* Alinea los elementos verticalmente al centro */
+  margin-bottom: 30px;  /* Espaciado inferior entre las secciones */
+  color: #284869;  /* Color del texto de la sección */
+  background-color: #f9f9f9;  /* Fondo gris claro para un contraste suave */
+  padding: 25px;  /* Espaciado interno de la sección */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Sombra ligera para darle profundidad */
+  transition: transform 0.3s ease-in-out;  /* Transición suave para el efecto de elevación */
+}
+
+.contenido-principal:hover {
+  transform: translateY(-5px);  /* Efecto de elevación al pasar el cursor, crea dinamismo */
+}
+
+/* Estilo para las imágenes */
+.imagen1 img {
+  width: 100%;  /* La imagen ocupa todo el ancho del contenedor */
+  max-width: 500px;  /* La imagen no se estirará más de 500px de ancho */
+  height: auto;  /* La altura se ajusta automáticamente para mantener la proporción */
+  border-radius: 10px;  /* Bordes redondeados en la imagen */
+  height: 250px;  /* Establece una altura fija para la imagen */
+  transition: transform 0.3s ease-in-out;  /* Efecto de transición para el zoom */
+}
+
+.imagen1 img:hover {
+  transform: scale(1.05);  /* Al pasar el cursor, la imagen aumenta ligeramente de tamaño */
+}
+
+/* Estilo para la introducción del texto */
+.contenido-introduccion {
+  max-width: 700px;  /* Establece un ancho máximo para la caja de texto */
+  color: #284869;  /* Color del texto de la introducción */
+  
+}
+
+.contenido-introduccion h2 {
+  margin-left: 5%;
+  font-size: 2.5em;  /* Tamaño grande para el título */
+  margin-bottom: 20px;  /* Espaciado inferior entre el título y el texto */
+  text-transform: uppercase;  /* Convierte el texto del título a mayúsculas */
+  letter-spacing: 2px;  /* Espaciado entre letras */
+  animation: fadeIn 1s ease-out;  /* Animación de entrada del título */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;  /* La animación comienza con el título invisible */
+  }
+  to {
+    opacity: 1;  /* La animación termina con el título completamente visible */
+  }
+}
+
+.contenido-introduccion p {
+  margin-left: 5%;
+  font-size: 1.2em;  /* Tamaño del texto del párrafo */
+  line-height: 1.7;  /* Altura de la línea para hacer el texto más legible */
+  color: #34495e;  /* Gris oscuro para el texto de los párrafos */
+  font-weight: 300;  /* Peso de fuente ligero para los párrafos */
+}
+
+/* Contenido inferior */
+.contenido-inferior {
+  display: flex;  /* Usamos Flexbox para disposición de los elementos */
+  justify-content: space-between;  /* Los elementos están espaciados de manera equidistante */
+  align-items: center;  /* Los elementos se alinean verticalmente en el centro */
+  color: #498183;  /* Color para el texto en esta sección */
+  margin-top: 40px;  /* Espaciado superior */
+  background-color: #f9f9f9;  /* Fondo gris suave para dar contraste */
+  padding: 30px;  /* Espaciado interno para separar el contenido */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Sombra suave */
+  transition: transform 0.3s ease-in-out;  /* Transición suave para el efecto de elevación */
+}
+
+.contenido-inferior:hover {
+  transform: translateY(-5px);  /* Efecto de elevación al pasar el cursor, crea dinamismo */
+}
+
+.productos-info {
+  max-width: 700px;  /* Ancho máximo para la caja de información de productos */
+}
+
+.productos-info h3 {
+  font-size: 2.5em;  /* Tamaño grande para el subtítulo */
+  margin-bottom: 15px;  /* Espaciado inferior entre el subtítulo y el texto */
+  color: #284869;  /* Color del texto */
+}
+
+.productos-info p {
+  font-size: 1.2em;  /* Tamaño del texto */
+  line-height: 1.8;  /* Altura de la línea para mejorar la legibilidad */
+  color: #34495e;  /* Gris oscuro para el texto de los párrafos */
+}
+
+/* Imagen de los productos */
+.productos-imagen img {
+  width: 100%;  /* La imagen ocupa todo el ancho del contenedor */
+  max-width: 500px;  /* No se estirará más allá de 500px de ancho */
+  height: 250px;  /* Altura fija para la imagen */
+  border-radius: 10px;  /* Bordes redondeados */
+  margin-right: 80px;  /* Espaciado derecho entre la imagen y el texto */
+  transition: transform 0.3s ease-in-out;  /* Efecto de transición para el zoom */
+}
+
+.productos-imagen img:hover {
+  transform: scale(1.05);  /* Efecto de zoom al pasar el cursor */
+}
+
+/* Título "PRODUCTOS MÁS VENDIDOS" */
+#tP {
+  color: #284869;  /* Color para el título */
+  text-align: center;  /* Alineación centrada */
+  margin-top: 60px;  /* Espaciado superior */
+  font-size: 3em;  /* Tamaño de fuente grande */
+  font-weight: 700;  /* Peso de fuente grueso para resaltar */
+  letter-spacing: 3px;  /* Espaciado entre letras */
+  text-transform: uppercase;  /* Texto en mayúsculas */
+  color: #34495e;  /* Gris oscuro para el color del título */
+}
+
+.PrVend {
+  padding: 25px;  /* Espaciado interno alrededor del contenido */
+  color: #284869;  /* Color principal para el texto */
+  margin-left: 20px;  /* Espaciado en el lado izquierdo */
+  margin-right: 20px;  /* Espaciado en el lado derecho */
+  background-color: #ffffff;  /* Fondo blanco para una apariencia limpia */
+  border-radius: 10px;  /* Bordes redondeados para dar suavidad */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave alrededor del contenedor */
+  transition: background-color 0.3s ease; 
+}
+
+.productos-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px; /* Espacio entre el título y los productos */
+  gap: 20px; /* Espacio entre los contenedores de los productos */
+}
+
+.producto-item {
+  background-color: #E3F2F2; /* Fondo claro para resaltar el producto */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 0px; /* Espacio alrededor de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+  text-align: center; /* Centra la imagen dentro del contenedor */ 
+  transition: transform 0.3s ease; /* Efecto de transición para el hover */
+
+}
+
+.imagen-producto {
+  width: 100%;
+  max-width: 200px; /* Tamaño máximo de la imagen */
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+.imagen-producto:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+
+/* Estilos para la sección de Mareas */
+.mareas-container {
+  margin: 40px auto;
+  padding: 25px;
+  max-width: 800px;
+  background: #ffffff; /* Color de fondo suave */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mareas-container h2 {
+  font-size: 2em;
+  color: #284869;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.mareas-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.listado {
+  background-color: #E3F2F2; /* Color de fondo */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.mareas-list li:hover {
+  background: #d6e9e9;
+  transition: background 0.3s ease-in-out;
+}
+
+.no-data {
+  font-size: 1.2em;
+  color: #b22222;
+  font-weight: bold;
+  text-align: center;
+}

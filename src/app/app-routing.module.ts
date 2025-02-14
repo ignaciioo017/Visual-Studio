@@ -8,13 +8,15 @@ import { FormularioCestaComponent } from './pages/formulario-cesta/formulario-ce
 import { ContactoComponent } from './pages/contacto/contacto.component';
 
 const routes: Routes = [
-  { path: '', component: InicioComponent }, // página de inicio
-  { path: 'catalogo', component: CatalogoComponent }, // catálogo
-  { path: 'producto/:id', component: ProductoComponent }, // producto
-  { path: 'cesta', component: CestaComponent }, //cesta
-  { path: 'formulario-cesta', component: FormularioCestaComponent }, // formulario cesta
-  { path: 'contacto', component: ContactoComponent }, // formulario contacto
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' }, // Redirige a inicio al cargar la página
+  { path: 'inicio', component: InicioComponent },
+  { path: 'catalogo', component: CatalogoComponent },
+  { path: 'producto/:id', component: ProductoComponent },
+  { path: 'cesta', component: CestaComponent },
+  { path: 'formulario-cesta', component: FormularioCestaComponent },
+  { path: 'contacto', component: ContactoComponent }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

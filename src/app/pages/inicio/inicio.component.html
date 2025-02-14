@@ -1,1 +1,106 @@
-<p>inicio works!</p>
+<br>
+<br> 
+
+<!--Este contenedor es el principal de la página web donde está la imagen a la izquierda y 
+el texto a la derecha-->
+<div class="inicio-container">  
+  <br>
+    <br>
+    <div class="contenido-principal">
+      <div class="imagen1">
+        <img src="Image/imgInicio.jpg" alt="Imagen de la tienda de pesca" />
+      </div>
+      <div class="contenido-introduccion">
+        <h2>Bienvenidos a nuestra tienda de pesca</h2>
+        <p>
+          En nuestra tienda encontrarás todo lo necesario para disfrutar de la pesca, desde cañas, 
+          carretes y más. Estamos comprometidos a ofrecer productos de calidad para los amantes 
+          de este deporte. ¡Prepárate para tu próxima aventura acuática con nosotros!
+        </p>
+      </div>
+    </div>
+    
+
+    <!--Este es el contenedor que se encuentra debajo del principal donde está el texto a la 
+    izquierda y la imagen a la derecha-->
+    <div class="contenido-inferior">
+      <div class="productos-info">
+        <h3>PRODUCTOS DESTACADOS</h3>
+        <p>
+          Ofrecemos una amplia variedad de productos para todos los niveles, desde principiantes hasta 
+          expertos. Cada uno de nuestros productos ha sido seleccionado cuidadosamente para asegurar que 
+          tengas la mejor experiencia de pesca posible.
+        </p>
+      </div>
+      <br>
+      <div class="productos-imagen">
+        <img src="Image/imgInicio2.avif" alt="Productos de pesca" />
+      </div>
+    </div> 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+  
+ <!--Este contenedor es el contenedor que muestra los productos más vendidos llamando a su imagen
+  y si pulsas cualquiera de ellas te lleva hacia el catálogo y además el producto se hace grande si
+  el cursor se encuentra encima de la imagen-->
+  <div class="PrVend">
+    <h2 id="tP">PRODUCTOS MAS VENDIDOS</h2>
+    
+    <br>
+    <br>
+
+    <div class="productos-container" onclick="window.location.href='/catalogo';" style="cursor: pointer;">
+      <div class="producto-item">
+        <img src="Image/p1.jpg" alt="Producto 1" class="imagen-producto"/>
+      </div>
+      <div class="producto-item">
+        <img src="Image/p2.png" alt="Producto 2" class="imagen-producto"/>
+      </div>
+      <div class="producto-item">
+        <img src="Image/p3.png" alt="Producto 3" class="imagen-producto"/>
+      </div>
+      <div class="producto-item">
+        <img src="Image/p4.png" alt="Producto 4" class="imagen-producto"/>
+      </div>
+      <div class="producto-item">
+        <img src="Image/p5.png" alt="Producto 5" class="imagen-producto"/>
+      </div>
+    </div>
+    </div>
+
+    <br>
+    <br>
+
+
+    <!--Este es el contenedor de la api el cual se encarga de mostrar en forma de lista 
+    los estados de las mareas según la fecha-->
+    <div class="mareas-container">
+    <div *ngIf="mareas.length > 0; else noData">
+      <h2>Mareas para el Puerto {{ idPuerto }} (Cádiz) </h2>
+      <br>
+      <ul class="listado">
+        <br>
+        <p *ngFor="let marea of mareas">
+          Hora: {{ marea.hora }} - Altura: {{ marea.altura }}
+        </p>
+        <br>
+      </ul>
+    </div>
+    
+    <ng-template #noData>
+      <p>No hay datos de mareas disponibles.</p>
+    </ng-template>
+    </div>
+ 
+    <br>
+    <br>
+    <br>
+
+  </div>
+  

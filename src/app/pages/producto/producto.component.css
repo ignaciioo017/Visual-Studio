@@ -1,0 +1,40 @@
+.detalle {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+  }
+  .detalle img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  button:hover {
+    background-color: #218838;
+  }
+  /* producto.component.css */
+  .detalle {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+  }
+  
+  .imagen-contenedor {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    width: 100%; /* El contenedor ocupa todo el ancho */
+    height: 300px; /* Ajusta la altura según sea necesario */
+  }
+  
+  .imagen-contenedor img {
+    max-width: 100%; /* La imagen no debe exceder el contenedor */
+    max-height: 100%; /* La imagen no debe exceder la altura del contenedor */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+  }
+  

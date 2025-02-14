@@ -1,0 +1,52 @@
+/* Estilos para el header */
+header {
+  background-color: #498183;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  width: 100vw;  /* Hace que el header ocupe todo el ancho */
+  max-width: 100%;  /* Asegura que no se pase del ancho */
+  box-sizing: border-box;  /* Evita que el padding haga que crezca más del 100% */
+}
+
+.logo-container {
+  flex-shrink: 0;  /* Evita que la imagen se reduzca */
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.titulo {
+  text-align: center;
+  color: white;
+  flex-grow: 1;  /* Permite que el título ocupe más espacio */
+  text-align: center;  /* Centra el título */
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 2;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}

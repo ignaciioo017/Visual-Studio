@@ -1,0 +1,73 @@
+/* Estilos del Footer */
+.footer {
+    background-color: #498183; /* Color de fondo */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Sección de enlaces */
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sección "Sobre Nosotros" */
+  .footer-about {
+    text-align: center;
+  }
+  
+  .footer-about h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .footer-about p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /* Sección de redes sociales */
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-social a:hover {
+    color: #a6cfcf;
+  }
+  
+  /* Derechos reservados */
+  .footer-copy {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 8px;
+  }
+  

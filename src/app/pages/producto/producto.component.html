@@ -1,1 +1,13 @@
-<p>producto works!</p>
+<br>
+<br>
+<br>
+<div class="detalle">
+  <div class="imagen-contenedor">
+    <img [src]="producto.imagen" [alt]="producto.nombre" [ngStyle]="producto.estilo" />
+  </div>
+  <h1>{{ producto.nombre }}</h1>
+  <p>{{ producto.descripcion }}</p>
+  <p><strong>Precio:</strong> {{ producto.precio | currency }}</p>
+  <button (click)="agregarAlCarrito()">Agregar al carrito</button>
+</div>
+

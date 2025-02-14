@@ -6,6 +6,11 @@ import { CestaComponent } from "./cesta/cesta.component";
 import { ContactoComponent } from "./contacto/contacto.component";
 import { ProductoComponent } from "./producto/producto.component";
 import { FormularioCestaComponent } from "./formulario-cesta/formulario-cesta.component";
+import { SharedModule } from "../components/shared.component";
+import { RouterModule } from '@angular/router';
+import { ProductoServicio } from "../service/producto.servicio/producto.servicio.component";
+import { FormsModule } from "@angular/forms";
+
 
 @NgModule({
     declarations:[
@@ -14,10 +19,13 @@ import { FormularioCestaComponent } from "./formulario-cesta/formulario-cesta.co
         CestaComponent,
         ContactoComponent,
         ProductoComponent,
-        FormularioCestaComponent
+        FormularioCestaComponent,
     ],
     imports:[
-        CommonModule
+        CommonModule,
+        SharedModule,
+        RouterModule,
+        FormsModule
     ],
     exports:[
         InicioComponent,
@@ -25,7 +33,10 @@ import { FormularioCestaComponent } from "./formulario-cesta/formulario-cesta.co
         CestaComponent,
         ContactoComponent,
         ProductoComponent,
-        FormularioCestaComponent
-    ]
+        FormularioCestaComponent,
+    ], 
+    providers: [ProductoServicio], 
+    bootstrap: []
+
 })
 export class PageModule{}

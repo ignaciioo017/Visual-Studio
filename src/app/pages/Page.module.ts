@@ -10,7 +10,7 @@ import { SharedModule } from "../components/shared.component";
 import { RouterModule } from '@angular/router';
 import { ProductoServicio } from "../service/producto.servicio/producto.servicio.component";
 import { FormsModule } from "@angular/forms";
-
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     declarations:[
@@ -25,7 +25,8 @@ import { FormsModule } from "@angular/forms";
         CommonModule,
         SharedModule,
         RouterModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     exports:[
         InicioComponent,

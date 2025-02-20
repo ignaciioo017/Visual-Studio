@@ -7,6 +7,7 @@ import { SharedModule } from './components/shared.component';
 import { ProductoServicio } from './service/producto.servicio/producto.servicio.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule para usar HttpClient
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientMo
     SharedModule,
     FormsModule,
     HttpClientModule, 
+    ReactiveFormsModule 
   ],
   providers: [
     ProductoServicio

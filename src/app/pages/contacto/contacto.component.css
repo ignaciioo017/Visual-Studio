@@ -1,0 +1,164 @@
+h2 {
+    text-align: center;
+    justify-content: center;
+    color: #002d5a;
+}
+
+hr{
+    width: 20%;
+}
+
+#sep {
+    width: 100%;
+    border: solid;
+    border-width: 1px;
+    border-color: #002d5a;
+}
+
+.contacto-info hr {
+    width: 80%;
+}
+
+/* Estilos para el mensaje encima de los detalles */
+.mensaje-contacto {
+    background: #E3F2F2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Separación entre el mensaje y los detalles */
+    border: solid;
+    border-width: 2px;
+    border-color: #002d5a;
+    text-align: center;
+}
+
+.mensaje-contacto p {
+    color: #004080;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.contacto-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+.contacto-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacto-resumen {
+    background: #E3F2F2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    border: solid;
+    border-width: 2px;
+    border-color: #002d5a;
+}
+
+.contacto-resumen h3 {
+    color: #004080;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contacto-container {
+    background: #E3F2F2;
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    text-align: left;
+    border: solid;
+    border-width: 2px;
+    border-color: #002d5a;
+}
+
+.contacto-container h2 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+label i {
+    margin-right: 8px;
+    color: #004080;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+button:hover {
+    background: #002d5a;
+}
+
+
+/* Contenedor del formulario */
+.contact-container {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .mensaje-exito {
+    color: white;
+    background-color: green;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  

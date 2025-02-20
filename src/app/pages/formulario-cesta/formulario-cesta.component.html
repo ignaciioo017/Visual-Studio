@@ -1,1 +1,64 @@
-<p>formulario-cesta works!</p>
+<div *ngIf="mensaje" class="mensaje-notificacion">
+  {{ mensaje }}
+</div>
+
+<br>
+<br>
+<div class="checkout-container">
+  <h2>Finalizar Compra</h2>
+  <hr>
+  <form (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
+    <!-- Información del Cliente -->
+    <div class="form-group">
+      <label for="nombre">Nombre Completo</label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="formData.nombre" required #nombre="ngModel">
+      <div *ngIf="errores.nombre" class="error">{{ errores.nombre }}</div>
+    </div>
+    <div class="form-group">
+      <label for="email">Correo Electrónico</label>
+      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required #email="ngModel">
+      <div *ngIf="errores.email" class="error">{{ errores.email }}</div>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" [(ngModel)]="formData.telefono" required #telefono="ngModel">
+      <div *ngIf="errores.telefono" class="error">{{ errores.telefono }}</div>
+    </div>
+    <hr>
+    <!-- Dirección de Envío -->
+    <div class="form-group">
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" name="direccion" [(ngModel)]="formData.direccion" required #direccion="ngModel">
+      <div *ngIf="errores.direccion" class="error">{{ errores.direccion }}</div>
+    </div>
+    <div class="form-group">
+      <label for="ciudad">Ciudad</label>
+      <input type="text" id="ciudad" name="ciudad" [(ngModel)]="formData.ciudad" required #ciudad="ngModel">
+      <div *ngIf="errores.ciudad" class="error">{{ errores.ciudad }}</div>
+    </div>
+    <div class="form-group">
+      <label for="cp">Código Postal</label>
+      <input type="text" id="cp" name="cp" [(ngModel)]="formData.cp" required #cp="ngModel">
+      <div *ngIf="errores.cp" class="error">{{ errores.cp }}</div>
+    </div>
+    <hr>
+    <!-- Métodos de Pago -->
+    <div class="form-group">
+      <label for="tarjeta">Número de Tarjeta</label>
+      <input type="text" id="tarjeta" name="tarjeta" [(ngModel)]="formData.tarjeta" required #tarjeta="ngModel">
+      <div *ngIf="errores.tarjeta" class="error">{{ errores.tarjeta }}</div>
+    </div>
+    <div class="form-group">
+      <label for="expiracion">Fecha de Expiración</label>
+      <input type="month" id="expiracion" name="expiracion" [(ngModel)]="formData.expiracion" required #expiracion="ngModel">
+      <div *ngIf="errores.expiracion" class="error">{{ errores.expiracion }}</div>
+    </div>
+    <div class="form-group">
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" [(ngModel)]="formData.cvv" required #cvv="ngModel">
+      <div *ngIf="errores.cvv" class="error">{{ errores.cvv }}</div>
+    </div>
+    
+    <button type="submit" class="btn">Realizar Pago</button>
+  </form>
+</div>

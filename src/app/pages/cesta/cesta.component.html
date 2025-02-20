@@ -1,1 +1,39 @@
-<p>cesta</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> 
+</head>
+<body>
+  <div class="cesta">CESTA</div>
+  <div class="cesta-container">
+    <!-- Lista de productos -->
+    <div class="cesta-productos">
+      <div *ngFor="let item of carrito" class="producto-item">
+        <img [src]="item.imagen" [alt]="item.nombre" />
+        <div>
+          <h4>{{ item.nombre }}</h4>
+          <p>{{ item.precio }} €</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Datos estáticos a la derecha -->
+    <div class="cesta-resumen">
+      <h3>Detalles de contacto</h3>
+      <p><strong>Teléfono:</strong> 626877898</p>
+      <p><strong>Gmail:</strong> Elrincon&commat;pescador.com</p>
+  
+      <!-- Precio total -->
+      <div class="total-price">
+        <p><strong>Precio Total:</strong> {{ obtenerPrecioTotal() }} €</p>
+      </div>
+  
+<!-- Botón de pagar -->
+<button [routerLink]="carrito.length > 0 ? '/formulario-cesta' : null" [disabled]="carrito.length === 0">
+  Pagar
+</button>
+    </div>
+  </div>
+  
+</body>
+</html>

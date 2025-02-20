@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+/**
+ * Componente para el pie de página
+ */
+
+import { Component} from '@angular/core';
 
 @Component({
     selector: 'app-footer',
@@ -6,8 +10,5 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./footer.css']
 })
 
-export class FooterComponent implements OnInit {
-    constructor() { }
-
-    ngOnInit() { }
+export class FooterComponent{
 }

@@ -181,13 +181,19 @@
 /* Estilos para la sección de Mareas */
 .mareas-container {
   margin: 40px auto;
-  padding: 25px;
+  padding: 5px;
   max-width: 800px;
   background: #ffffff; /* Color de fondo suave */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
+.mareas-container hr{
+  width: 70%;
+  color: #284869;
+}
+
 
 .mareas-container h2 {
   font-size: 2em;
@@ -204,12 +210,17 @@
 .listado {
   background-color: #E3F2F2; /* Color de fondo */
   border-radius: 5px; /* Bordes redondeados */
+  display: inline-block; /* Ajusta el tamaño al contenido */
+  padding: 5px 40px; /* Espaciado interno */
 }
+
 
 .mareas-list li:hover {
   background: #d6e9e9;
   transition: background 0.3s ease-in-out;
 }
+
+
 
 .no-data {
   font-size: 1.2em;

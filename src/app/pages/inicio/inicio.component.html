@@ -84,6 +84,8 @@ el texto a la derecha-->
     <div *ngIf="mareas.length > 0; else noData">
       <h2>Mareas para el Puerto {{ idPuerto }} (Cádiz) </h2>
       <br>
+      <hr>
+      <br>
       <ul class="listado">
         <br>
         <p *ngFor="let marea of mareas">

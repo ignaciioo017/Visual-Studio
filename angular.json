@@ -25,7 +25,7 @@
           "options": {
             "outputPath": "dist/tienda-pesca",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -39,6 +39,7 @@
             "styles": [
               "src/styles.css",
               "node_modules/leaflet/dist/leaflet.css"
+
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -52,13 +53,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "15MB",
-                  "maximumError": "20MB"
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "200kB",
-                  "maximumError": "300kB"
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
                 }
               ],
               "outputHashing": "all"

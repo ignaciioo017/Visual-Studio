@@ -1,0 +1,9 @@
+{
+  "routes": [
+    "/catalogo",
+    "/cesta",
+    "/contacto",
+    "/formulario-cesta",
+    "/inicio"
+  ]
+}

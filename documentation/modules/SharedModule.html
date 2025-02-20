@@ -220,6 +220,13 @@
 
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p>Este módulo contiene los componentes compartidos que pueden ser reutilizados en otras partes de la aplicación.</p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -263,22 +270,40 @@ import { HeaderComponent } from &#x27;./header/header&#x27;;
 import { RouterModule } from &#x27;@angular/router&#x27;;
 import { FooterComponent } from &#x27;./footer/footer&#x27;;
 
+/**
+ * @module SharedModule
+ * 
+ * Este módulo contiene los componentes compartidos que pueden ser reutilizados en otras partes de la aplicación.
+ */
 @NgModule({
-    declarations: [
-        HeaderComponent,
-        FooterComponent
+  /**
+   * Declaraciones de los componentes que pertenecen a este módulo.
+   * Estos componentes solo estarán disponibles dentro de este módulo.
+   */
+  declarations: [
+    HeaderComponent,
+    FooterComponent
+  ],
 
-    ],
-    imports: [
-        CommonModule,
-        RouterModule
-    ],
-    exports: [
-        HeaderComponent,
-        FooterComponent
-    ]
-  })
-  export class SharedModule { }</code></pre>
+  /**
+   * Módulos que este módulo necesita para funcionar correctamente.
+   */
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
+
+  /**
+   * Componentes y directivas que se exportan para ser usados en otros módulos.
+   * Los componentes exportados en este módulo estarán disponibles en cualquier otro módulo que lo importe.
+   */
+  exports: [
+    HeaderComponent,
+    FooterComponent
+  ]
+})
+export class SharedModule { }
+</code></pre>
     </div>
 </div>
 

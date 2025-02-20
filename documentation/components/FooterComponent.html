@@ -126,12 +126,6 @@
 
 
 
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                <code>OnInit</code>
-    </p>
 
 
 <section data-compodoc="block-metadata">
@@ -180,106 +174,19 @@
     </table>
 </section>
 
-    <section data-compodoc="block-index">
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
 
 
 
-        </tbody>
-    </table>
-</section>
-
-    <section data-compodoc="block-constructor">
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/components/footer/footer.ts:9</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
 
-
-
-
-    <section data-compodoc="block-methods">
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="12"
-                                    class="link-to-prism">src/app/components/footer/footer.ts:12</a></div>
-                        </td>
-                    </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                        <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                        </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component} from &#x27;@angular/core&#x27;;
 
 @Component({
     selector: &#x27;app-footer&#x27;,
@@ -287,10 +194,7 @@
     styleUrls: [&#x27;./footer.css&#x27;]
 })
 
-export class FooterComponent implements OnInit {
-    constructor() { }
-
-    ngOnInit() { }
+export class FooterComponent{
 }</code></pre>
     </div>
 
@@ -312,9 +216,9 @@ export class FooterComponent implements OnInit {
   
       &lt;!-- Redes sociales a la derecha --&gt;
       &lt;div class&#x3D;&quot;footer-social&quot;&gt;
-        &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href&#x3D;&quot;https://www.facebook.com&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href&#x3D;&quot;https://www.instagram.com&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href&#x3D;&quot;https://www.twitter.com&quot; target&#x3D;&quot;_blank&quot; &gt;&lt;i class&#x3D;&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
       &lt;/div&gt;
   
     &lt;/div&gt;
@@ -402,6 +306,7 @@ export class FooterComponent implements OnInit {
     font-size: 0.8rem;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 8px;
+    margin-left: 60px;
   }
   </code></pre>
     </div>
@@ -431,8 +336,8 @@ export class FooterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><footer class="footer">    <div class="footer-container">            <!-- Enlaces rápidos a la izquierda -->      <nav class="footer-links">        <a href="/catalogo">Catálogo</a>        <a href="/contacto">Contacto</a>      </nav>        <!-- Sección "Sobre Nosotros" en el centro -->      <div class="footer-about">        <h3>Sobre Nosotros</h3>        <p>Especialistas en cañas, carretes, señuelos y más.</p>      </div>        <!-- Redes sociales a la derecha -->      <div class="footer-social">        <a href="#"><i class="fab fa-facebook-f"></i></a>        <a href="#"><i class="fab fa-instagram"></i></a>        <a href="#"><i class="fab fa-twitter"></i></a>      </div>      </div>      <!-- Derechos reservados -->    <div class="footer-copy">      &copy;. 2025 El Rincón del Pescador. Todos los derechos reservados.    </div>  </footer>  </div>'
-    var COMPONENTS = [{'name': 'AddCharacterComponent', 'selector': 'dbz-add-character'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CatalogoComponent', 'selector': 'app-catalogo'},{'name': 'CestaComponent', 'selector': 'app-cesta'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormularioCestaComponent', 'selector': 'app-formulario-cesta'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'InterfaceComponent', 'selector': 'app-interface'},{'name': 'ListComponent', 'selector': 'dbz-list'},{'name': 'MainPageComponent', 'selector': 'app-dbz-main-page'},{'name': 'ProductoComponent', 'selector': 'app-producto'}];
+        var COMPONENT_TEMPLATE = '<div><footer class="footer">    <div class="footer-container">            <!-- Enlaces rápidos a la izquierda -->      <nav class="footer-links">        <a href="/catalogo">Catálogo</a>        <a href="/contacto">Contacto</a>      </nav>        <!-- Sección "Sobre Nosotros" en el centro -->      <div class="footer-about">        <h3>Sobre Nosotros</h3>        <p>Especialistas en cañas, carretes, señuelos y más.</p>      </div>        <!-- Redes sociales a la derecha -->      <div class="footer-social">        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>        <a href="https://www.twitter.com" target="_blank" ><i class="fab fa-twitter"></i></a>      </div>      </div>      <!-- Derechos reservados -->    <div class="footer-copy">      &copy;. 2025 El Rincón del Pescador. Todos los derechos reservados.    </div>  </footer>  </div>'
+    var COMPONENTS = [{'name': 'AddCharacterComponent', 'selector': 'dbz-add-character'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CatalogoComponent', 'selector': 'app-catalogo'},{'name': 'CestaComponent', 'selector': 'app-cesta'},{'name': 'ContactoComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormularioCestaComponent', 'selector': 'app-formulario-cesta'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'InterfaceComponent', 'selector': 'app-interface'},{'name': 'ListComponent', 'selector': 'dbz-list'},{'name': 'MainPageComponent', 'selector': 'app-dbz-main-page'},{'name': 'ProductoComponent', 'selector': 'app-producto'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FooterComponent'};
 </script>

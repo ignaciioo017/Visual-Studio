@@ -124,6 +124,22 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que representa el encabezado de la aplicación.</p>
+<p>Este componente es responsable de mostrar la barra de navegación superior de la aplicación.
+Generalmente incluye enlaces a las páginas principales de la aplicación y puede resaltar
+la sección activa en la barra de navegación.</p>
+<p>El componente utiliza el enrutador de Angular para gestionar la navegación entre rutas.</p>
+<p>Métodos:</p>
+<ul>
+<li><code>isActive(route: string): boolean</code>: Verifica si la ruta proporcionada es la ruta activa.</li>
+<li><code>navigate(route: string): void</code>: Realiza la navegación hacia la ruta proporcionada.</li>
+</ul>
+
+    </p>
 
 
 
@@ -216,7 +232,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/components/header/header.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/header/header.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -283,14 +299,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="12"
-                                    class="link-to-prism">src/app/components/header/header.ts:12</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="31"
+                                    class="link-to-prism">src/app/components/header/header.ts:31</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método que verifica si la ruta proporcionada es la ruta activa.</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -301,6 +319,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -315,6 +334,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>La ruta que se quiere verificar.</p>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -324,7 +347,8 @@
 
                         </div>
                             <div class="io-description">
-                                
+                                <p><code>true</code> si la ruta proporcionada es la ruta activa, <code>false</code> en caso contrario.</p>
+
                             </div>
                 </td>
             </tr>
@@ -350,14 +374,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="16"
-                                    class="link-to-prism">src/app/components/header/header.ts:16</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="40"
+                                    class="link-to-prism">src/app/components/header/header.ts:40</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método que realiza la navegación a la ruta proporcionada.</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -368,6 +394,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -382,6 +409,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>La ruta a la que se quiere navegar.</p>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -406,6 +437,19 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
 
+/**
+ * Componente que representa el encabezado de la aplicación.
+ * 
+ * Este componente es responsable de mostrar la barra de navegación superior de la aplicación.
+ * Generalmente incluye enlaces a las páginas principales de la aplicación y puede resaltar
+ * la sección activa en la barra de navegación.
+ * 
+ * El componente utiliza el enrutador de Angular para gestionar la navegación entre rutas.
+ * 
+ * Métodos:
+ * - &#x60;isActive(route: string): boolean&#x60;: Verifica si la ruta proporcionada es la ruta activa.
+ * - &#x60;navigate(route: string): void&#x60;: Realiza la navegación hacia la ruta proporcionada.
+ */
 @Component({
   selector: &#x27;app-header&#x27;,
   templateUrl: &#x27;./header.html&#x27;,
@@ -414,14 +458,26 @@ import { Router } from &#x27;@angular/router&#x27;;
 export class HeaderComponent {
   constructor(private router: Router) {}
 
+  /**
+   * Método que verifica si la ruta proporcionada es la ruta activa.
+   * 
+   * @param route La ruta que se quiere verificar.
+   * @returns &#x60;true&#x60; si la ruta proporcionada es la ruta activa, &#x60;false&#x60; en caso contrario.
+   */
   isActive(route: string): boolean {
     return this.router.url &#x3D;&#x3D;&#x3D; route;
   }
 
+  /**
+   * Método que realiza la navegación a la ruta proporcionada.
+   * 
+   * @param route La ruta a la que se quiere navegar.
+   */
   navigate(route: string): void {
     this.router.navigate([route]);
   }
-}</code></pre>
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
@@ -436,7 +492,7 @@ export class HeaderComponent {
 &lt;body&gt;
     &lt;header&gt;
         &lt;div class&#x3D;&quot;logo-container&quot;&gt;
-          &lt;img src&#x3D;&quot;Image/logoEmpresa.png&quot; alt&#x3D;&quot;Logo Empresa&quot; class&#x3D;&quot;logo&quot;&gt;
+          &lt;img src&#x3D;&quot;/Image/logoEmpresa.png&quot; alt&#x3D;&quot;Logo Empresa&quot; class&#x3D;&quot;logo&quot;&gt;
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;titulo&quot;&gt;
             &lt;h1&gt;EL RINCON DEL PESCADOR&lt;/h1&gt;
@@ -540,8 +596,8 @@ nav ul li a:hover {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!DOCTYPE html><html lang="es"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="header.css">    <title>Pesca</title></head><body>    <header>        <div class="logo-container">          <img src="Image/logoEmpresa.png" alt="Logo Empresa" class="logo">        </div>        <div class="titulo">            <h1>EL RINCON DEL PESCADOR</h1>        </div>        <nav>            <ul>                      <li><a routerLink="/inicio" routerLinkActive="active">INICIO</a></li>                <li><a routerLink="/catalogo" routerLinkActive="active">CATALOGO</a></li>                <li><a routerLink="/cesta" routerLinkActive="active">CESTA</a></li>                <li><a routerLink="/contacto" routerLinkActive="active">CONTACTA</a></li>            </ul>        </nav>    </header>    <script src="header.ts"></script></body></html></div>'
-    var COMPONENTS = [{'name': 'AddCharacterComponent', 'selector': 'dbz-add-character'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CatalogoComponent', 'selector': 'app-catalogo'},{'name': 'CestaComponent', 'selector': 'app-cesta'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormularioCestaComponent', 'selector': 'app-formulario-cesta'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'InterfaceComponent', 'selector': 'app-interface'},{'name': 'ListComponent', 'selector': 'dbz-list'},{'name': 'MainPageComponent', 'selector': 'app-dbz-main-page'},{'name': 'ProductoComponent', 'selector': 'app-producto'}];
+        var COMPONENT_TEMPLATE = '<div><!DOCTYPE html><html lang="es"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="header.css">    <title>Pesca</title></head><body>    <header>        <div class="logo-container">          <img src="/Image/logoEmpresa.png" alt="Logo Empresa" class="logo">        </div>        <div class="titulo">            <h1>EL RINCON DEL PESCADOR</h1>        </div>        <nav>            <ul>                      <li><a routerLink="/inicio" routerLinkActive="active">INICIO</a></li>                <li><a routerLink="/catalogo" routerLinkActive="active">CATALOGO</a></li>                <li><a routerLink="/cesta" routerLinkActive="active">CESTA</a></li>                <li><a routerLink="/contacto" routerLinkActive="active">CONTACTA</a></li>            </ul>        </nav>    </header>    <script src="header.ts"></script></body></html></div>'
+    var COMPONENTS = [{'name': 'AddCharacterComponent', 'selector': 'dbz-add-character'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CatalogoComponent', 'selector': 'app-catalogo'},{'name': 'CestaComponent', 'selector': 'app-cesta'},{'name': 'ContactoComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormularioCestaComponent', 'selector': 'app-formulario-cesta'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'InterfaceComponent', 'selector': 'app-interface'},{'name': 'ListComponent', 'selector': 'dbz-list'},{'name': 'MainPageComponent', 'selector': 'app-dbz-main-page'},{'name': 'ProductoComponent', 'selector': 'app-producto'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
 </script>
